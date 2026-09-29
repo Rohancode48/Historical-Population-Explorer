@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page background */
+body {
+  background: #eef2f7;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #333;
+}
+
+/* Grid layout: sidebar + content */
+.app-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  min-height: 100vh;
+}
+
+/* Header spans full width */
+.header {
+  grid-column: 1 / -1;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top row: logo on left, title on right */
+.header .header-top {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling */
+.header img.logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Title styling */
+.header h1 {
+  font-size: 1.9rem;
+  color: #1f3c88;
+}
+
+/* Summary sits just below logo+title, full width of header */
+.summary {
+  margin-top: 0.75rem;
+  background: #d0e8ff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-style: italic;
+  color: #1a374d;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* Sidebar controls container */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Control group styling */
+.control-group {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #1f3c88;
+}
+.control-group input[type="number"],
+.control-group select {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 0.95rem;
+}
+.control-group select[multiple] {
+  height: 8rem;
+  overflow-y: auto;
+}
+
+/* Main content */
+.main {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Skeleton / loader */
+.skeleton {
+  height: 300px;
+  background: #ddd;
+  border-radius: 0.3rem;
+}
+
+/* Error text */
+.error {
+  color: #b00020;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+/* Chart.js canvas tuning */
+canvas {
+  font-family: "Segoe UI", sans-serif !important;
+  color: #333 !important;
+}
